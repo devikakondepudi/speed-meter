@@ -1,0 +1,24 @@
+<html>
+    
+    <head>
+        <title>speed-meter</title>
+        <link rel="stylesheet" href="speed-meter.css">
+    </head>
+    <body>
+        <div class='speed-meter'>
+            <span data-js-number>123</span>
+            <div class="speed">
+            <div class="unit">Mbps</div>
+            <div class="spinner"></div>
+            </div>
+        </div>
+        <script>
+            function tick (span) {
+    const n = Math.round(Math.random() * 600)
+    span.innerHTML = n
+    setTimeout(()=> tick(span), 800)
+}
+tick(document.querySelector('[data-js-number]'))
+        </script>
+    </body>
+</html>
